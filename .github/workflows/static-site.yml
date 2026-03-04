@@ -19,26 +19,10 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
 
-      # Debug: show what was built
-      - name: List build output
-        run: |
-          echo "=== Workspace root ==="
-          ls -la
-          echo "=== Looking for build output ==="
-          find . -name "index.html" -not -path "./node_modules/*" 2>/dev/null || echo "No index.html found"
-          for dir in __sapper__/export .svelte-kit/output dist build output site public; do
-            if [ -d "$dir" ]; then
-              echo "=== Found: $dir ==="
-              ls -la "$dir"
-            fi
-          done
-
-      # Deploy whatever we find
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./__sapper__/export
+          publish_dir: ./site/__sapper__/export
           cname: status.prairiecloud.io
           force_orphan: true
-        continue-on-error: true
