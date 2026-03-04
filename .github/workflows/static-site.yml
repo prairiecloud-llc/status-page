@@ -17,3 +17,8 @@ jobs:
           command: "site"
         env:
           GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./__sapper__/export
+          cname: status.prairiecloud.io
