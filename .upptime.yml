@@ -1,0 +1,62 @@
+# PrairieCloud Status Page — Upptime Configuration
+# https://upptime.js.org/docs/configuration
+
+owner: prairiecloud-llc
+repo: status-page
+
+sites:
+  - name: API
+    url: https://api.prairiecloud.io/health
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
+  - name: Documentation
+    url: https://docs.prairiecloud.io
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
+  - name: Dashboard
+    url: https://dashboard.prairiecloud.io
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
+  - name: Website
+    url: https://prairiecloud.io
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
+status-website:
+  cname: status.prairiecloud.io
+  name: PrairieCloud Status
+  logoUrl: https://prairiecloud.io/logo-light.jpg
+  theme: light
+  navbar:
+    - title: PrairieCloud
+      href: https://prairiecloud.io
+    - title: API Docs
+      href: https://docs.prairiecloud.io
+    - title: Dashboard
+      href: https://dashboard.prairiecloud.io
+
+# Check every 5 minutes
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  graphs: "0 */6 * * *"
+  staticSite: "0 */12 * * *"
+  summary: "0 0 * * *"
+
+# Commit settings
+commitMessages:
+  statusChange: "$SITE_NAME is $STATUS ($RESPONSE_CODE)"
+  startCommit: "Initial status check"
+
+i18n:
+  activeIncidents: Active incidents
+  allSystemsOperational: All systems operational
+  incidentReport: "Incident report for $SITE_NAME"
+  pastIncidents: Past incidents
+  subscribeByRss: Subscribe via RSS
