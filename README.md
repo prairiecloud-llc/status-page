@@ -7,12 +7,12 @@
 
 Powered by [Upptime](https://upptime.js.org). Monitors:
 
-| Service | URL |
-|---------|-----|
-| API | `api.prairiecloud.io/health` |
-| Documentation | `docs.prairiecloud.io` |
-| Dashboard | `dashboard.prairiecloud.io` |
-| Website | `prairiecloud.io` |
+| Service       | URL                          |
+| ------------- | ---------------------------- |
+| API           | `api.prairiecloud.io/health` |
+| Documentation | `docs.prairiecloud.io`       |
+| Dashboard     | `dashboard.prairiecloud.io`  |
+| Website       | `prairiecloud.io`            |
 
 Checks run every 5 minutes via GitHub Actions. Status page hosted on GitHub Pages.
 
@@ -23,6 +23,7 @@ This repo is fully automated by Upptime. Configuration is in `.upptime.yml`.
 ### DNS Required
 
 Add a CNAME record in Cloudflare:
+
 - **Type:** CNAME
 - **Name:** status
 - **Target:** prairiecloud-llc.github.io
