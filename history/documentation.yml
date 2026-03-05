@@ -1,7 +1,7 @@
 url: https://docs.prairiecloud.io
-status: up
-code: 200
-responseTime: 172
-lastUpdated: 2026-03-05T05:05:09.886Z
+status: down
+code: 403
+responseTime: 73
+lastUpdated: 2026-03-05T07:32:24.932Z
 startTime: 2026-03-04T12:35:08.001Z
 generator: Upptime <https://github.com/upptime/upptime>
