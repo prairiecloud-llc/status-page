@@ -40,19 +40,19 @@ status-website:
 
     /* Navigation */
     nav {
-      background: #0d1f3c !important;
-      border-bottom: 2px solid #195BA5;
-      box-shadow: none;
+      background: #ffffff !important;
+      border-bottom: 3px solid #195BA5;
+      box-shadow: 0 1px 6px rgba(25, 91, 165, 0.08);
     }
 
     nav a {
-      color: #82C021 !important;
+      color: #195BA5 !important;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
     }
 
     nav a:hover {
-      color: #ffffff !important;
+      color: #107332 !important;
     }
 
     /* Links */
