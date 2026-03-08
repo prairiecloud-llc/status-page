@@ -15,55 +15,54 @@ status-website:
   cname: status.prairiecloud.io
   name: PrairieCloud Status
   logoUrl: https://prairiecloud.io/logo-light.jpg
-  theme: light
+  theme: dark
   js: |
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap';
     document.head.appendChild(link);
   css: |
-    /* ── PrairieCloud Brand: Prairie Morning ────────────── */
+    /* ── PrairieCloud Brand: Midnight Prairie ──────────── */
 
     /* Base */
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #F0F7F2;
-      color: #2C3E50;
+      background-color: #0A1628 !important;
+      color: #dce6f0;
     }
 
     /* Typography */
     h1, h2, h3, h4 {
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      color: #195BA5;
+      font-weight: 700;
+      color: #82C021;
     }
 
     /* Navigation */
     nav {
-      background: #ffffff;
-      border-bottom: 3px solid #195BA5;
-      box-shadow: 0 1px 6px rgba(25, 91, 165, 0.08);
+      background: #0d1f3c !important;
+      border-bottom: 2px solid #195BA5;
+      box-shadow: none;
     }
 
     nav a {
-      color: #195BA5 !important;
+      color: #82C021 !important;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
     }
 
     nav a:hover {
-      color: #107332 !important;
-      text-decoration: none;
+      color: #ffffff !important;
     }
 
     /* Links */
     a { color: #348FC6; }
-    a:hover { color: #195BA5; }
+    a:hover { color: #82C021; }
 
     /* Site cards */
     .site {
-      background: #ffffff;
-      border: 1px solid #C8D3DF;
+      background: #0d1f3c;
+      border: 1px solid #195BA5;
       border-radius: 8px;
       margin-bottom: 10px;
       padding: 16px 20px;
@@ -72,14 +71,15 @@ status-website:
     /* Uptime graph bars */
     .day.up { background-color: #82C021 !important; }
     .day.down { background-color: #c0392b !important; }
-    .day.no-data { background-color: #C8D3DF !important; }
+    .day.no-data { background-color: #1e3050 !important; }
 
     /* Status badge — operational */
     .status-operational,
     .badge-success,
     [class*="operational"] {
       background-color: #107332 !important;
-      color: #ffffff !important;
+      color: #82C021 !important;
+      border: 1px solid #82C021;
       border-radius: 6px;
       font-family: 'Inter', sans-serif;
       font-weight: 600;
@@ -87,7 +87,7 @@ status-website:
 
     /* Footer */
     footer {
-      border-top: 1px solid #C8D3DF;
+      border-top: 1px solid #1e3050;
       color: #6B7C93;
       font-size: 0.85rem;
     }
