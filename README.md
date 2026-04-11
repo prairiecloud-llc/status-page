@@ -5,32 +5,51 @@
 
 **Live at:** [status.prairiecloud.io](https://status.prairiecloud.io)
 
-Powered by [Upptime](https://upptime.js.org). Monitors:
+Powered by [Upptime](https://upptime.js.org).
 
-| Service       | URL                          |
-| ------------- | ---------------------------- |
-| API           | `api.prairiecloud.io/health` |
-| Documentation | `docs.prairiecloud.io`       |
-| Dashboard     | `dashboard.prairiecloud.io`  |
-| Website       | `prairiecloud.io`            |
+## Current Monitors
 
-Checks run every 5 minutes via GitHub Actions. Status page hosted on GitHub Pages.
+| Service | URL |
+| ------- | --- |
+| API | `https://api.prairiecloud.io/health` |
 
-## Setup
+Checks run every 5 minutes via GitHub Actions. Status page is hosted on GitHub Pages.
 
-This repo is fully automated by Upptime. Configuration is in `.upptime.yml`.
+## Planned Maintenance Operations
 
-### DNS Required
+This repo is also PrairieCloud's current public status surface for planned maintenance communications.
 
-Add a CNAME record in Cloudflare:
+See:
+- `docs/maintenance-workflow.md`
 
+That workflow documents how to:
+- create a maintenance thread
+- publish updates during a maintenance window
+- trigger a manual site refresh when needed
+
+## Repo Notes
+
+Configuration is in:
+- `.upptimerc.yml`
+
+Main workflows:
+- `.github/workflows/uptime.yml`
+- `.github/workflows/response-time.yml`
+- `.github/workflows/graphs.yml`
+- `.github/workflows/summary.yml`
+- `.github/workflows/static-site.yml`
+- `.github/workflows/maintenance-site-refresh.yml`
+
+## DNS Required
+
+Cloudflare should include:
 - **Type:** CNAME
-- **Name:** status
-- **Target:** prairiecloud-llc.github.io
+- **Name:** `status`
+- **Target:** `prairiecloud-llc.github.io`
 
-### GitHub Pages
+## GitHub Pages
 
-Enable GitHub Pages in Settings → Pages → Source: `gh-pages` branch.
+GitHub Pages should publish from the `gh-pages` branch.
 
 ## License
 
