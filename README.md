@@ -12,6 +12,8 @@ Powered by [Upptime](https://upptime.js.org).
 | Service | URL |
 | ------- | --- |
 | API | `https://api.prairiecloud.io/health` |
+| Docs | `https://docs.prairiecloud.io` |
+| Dashboard | `https://dashboard.prairiecloud.io` |
 
 Checks run every 5 minutes via GitHub Actions. Status page is hosted on GitHub Pages.
 

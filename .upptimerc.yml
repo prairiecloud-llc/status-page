@@ -11,6 +11,18 @@ sites:
     expectedStatusCodes:
       - 200
 
+  - name: Docs
+    url: https://docs.prairiecloud.io
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
+  - name: Dashboard
+    url: https://dashboard.prairiecloud.io
+    icon: https://prairiecloud.io/favicon-32x32.png
+    expectedStatusCodes:
+      - 200
+
 status-website:
   cname: status.prairiecloud.io
   name: PrairieCloud Status
