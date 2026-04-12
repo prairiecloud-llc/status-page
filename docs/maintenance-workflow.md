@@ -1,31 +1,51 @@
 # PrairieCloud Status Page Maintenance Workflow
 
-This document describes how to use the `prairiecloud-llc/status-page` repository as PrairieCloud's **current public planned-maintenance surface**.
+This document explains how to use the `prairiecloud-llc/status-page` repository as PrairieCloud's public maintenance and status publication surface.
+
+## Public-repo rule
+
+This repository is public. Everything committed here should be treated as public-safe.
+
+That means this repo may contain:
+- public maintenance issue structure
+- public update workflow guidance
+- public label conventions
+- public site refresh instructions
+
+It should not contain:
+- internal-only audience details
+- internal recipient lists
+- private approval notes
+- internal escalation notes
+- internal rehearsal commentary
+- sensitive operational details that are not intended for customers or the public
 
 ## Purpose
 
-Until PrairieCloud adopts a more maintenance-aware status platform, this repo should be used to:
-- publish planned maintenance notices
+The status-page repository exists to support PrairieCloud's public status publication workflow.
+
+For maintenance events, it should be used to:
+- create public maintenance threads
 - publish maintenance start updates
 - publish extension updates
 - publish completion updates
-- rebuild the status site on demand when a maintenance update should appear quickly
+- rebuild the public status site on demand when needed
 
-## Important current-state note
+## Current-state note
 
-Upptime is strong for uptime monitoring and incident visibility, but it is not a polished first-class scheduled-maintenance system in this setup.
+PrairieCloud currently uses an Upptime-based status page backed by GitHub Actions and GitHub Pages.
 
-Because of that:
-- maintenance publishing should follow a repeatable operator workflow
-- the public rendering behavior should be validated with a dry run before first customer-facing use
+This works well as a public status surface, but it is not a fully featured scheduled-maintenance platform. Because of that, maintenance publication currently follows a small operator workflow built around GitHub issues and manual site refresh when necessary.
 
-## Recommended workflow
+## Maintenance publication workflow
 
 ### 1. Create a maintenance thread
-Create a GitHub issue in this repo for the maintenance event.
+
+Create a GitHub issue in this repository for the maintenance event.
 
 Recommended title format:
-- `Scheduled maintenance: PrairieCloud API on 2026-04-19 08:00 CDT`
+
+`Scheduled maintenance: PrairieCloud API on 2026-04-19 08:00 CDT`
 
 Recommended body sections:
 - summary
@@ -35,18 +55,21 @@ Recommended body sections:
 - statement that updates will be posted in the same thread
 
 ### 2. Publish the initial notice
+
 Once the issue is created:
 - verify the content is correct
-- use the issue URL in customer email notifications
-- manually trigger a status-site refresh if faster public propagation is needed
+- use the issue URL as the canonical event link
+- manually trigger a status-site refresh if faster propagation is needed
 
 ### 3. Publish start update
+
 At maintenance start:
 - add an update comment to the same thread
-- state the actual start time and impact
+- state the actual start time and customer impact
 - manually refresh the site if needed
 
 ### 4. Publish extension update if needed
+
 If the work exceeds the original window:
 - add an update comment immediately
 - include revised expected completion time
@@ -54,6 +77,7 @@ If the work exceeds the original window:
 - manually refresh the site if needed
 
 ### 5. Publish completion update
+
 When the work is complete:
 - add a completion update comment
 - state completion time
@@ -65,7 +89,7 @@ When the work is complete:
 Use the GitHub Actions workflow:
 - `Maintenance Site Refresh`
 
-This workflow exists so operators can rebuild/deploy the public status site without waiting for the scheduled static-site run.
+This workflow exists so operators can rebuild and deploy the public status site without waiting for the scheduled static-site run.
 
 ## Suggested labels
 
@@ -73,19 +97,8 @@ Recommended issue labels for maintenance threads:
 - `maintenance`
 - `scheduled-maintenance`
 - `customer-visible`
-- `extended` (only when applicable)
-
-## Dry run recommendation
-
-Before the first real customer-facing maintenance event:
-1. create a fake maintenance issue
-2. trigger a site refresh
-3. verify public rendering
-4. add a start update
-5. trigger another refresh
-6. add a completion update
-7. verify the final public result
+- `extended` when applicable
 
 ## Operational rule
 
-The status page is the canonical public source of truth for PrairieCloud maintenance events.
+The status page is PrairieCloud's canonical public source of truth for maintenance events.
