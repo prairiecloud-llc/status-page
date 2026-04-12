@@ -126,6 +126,6 @@ commitMessages:
 i18n:
   activeIncidents: Active incidents
   allSystemsOperational: All systems operational
-  incidentReport: "Incident report for $SITE_NAME — PrairieCloud"
+  incidentReport: "View report details"
   pastIncidents: Past incidents
   subscribeByRss: Subscribe via RSS
