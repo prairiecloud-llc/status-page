@@ -11,11 +11,11 @@ Powered by [Upptime](https://upptime.js.org).
 
 ## Current Monitors
 
-| Service | URL |
-| ------- | --- |
-| API | `https://api.prairiecloud.io/health` |
-| Docs | `https://docs.prairiecloud.io` |
-| Dashboard | `https://dashboard.prairiecloud.io` |
+| Service   | URL                                  |
+| --------- | ------------------------------------ |
+| API       | `https://api.prairiecloud.io/health` |
+| Docs      | `https://docs.prairiecloud.io`       |
+| Dashboard | `https://dashboard.prairiecloud.io`  |
 
 ## Planned Maintenance
 
