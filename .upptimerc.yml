@@ -50,6 +50,26 @@ status-website:
       color: #82C021;
     }
 
+    /* Main status content should read as neutral white text */
+    main h2,
+    main h3,
+    main h4,
+    main article,
+    main article div,
+    main article p,
+    main article span,
+    main article li {
+      color: #f8fafc !important;
+    }
+
+    main article a {
+      color: #348FC6 !important;
+    }
+
+    main article a:hover {
+      color: #82C021 !important;
+    }
+
     /* Navigation */
     nav {
       background: #ffffff !important;
