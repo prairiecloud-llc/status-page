@@ -102,12 +102,18 @@ status-website:
       background: #3b2a06 !important;
       border: 1px solid #f59e0b !important;
       border-left: 0.2rem solid #f59e0b !important;
-      color: #fde68a !important;
+      color: #f8fafc !important;
     }
 
     article.degraded.degraded-active h4,
-    article.degraded.degraded-active a,
-    article.degraded.degraded-active div {
+    article.degraded.degraded-active div,
+    article.degraded.degraded-active p,
+    article.degraded.degraded-active span,
+    article.degraded.degraded-active li {
+      color: #f8fafc !important;
+    }
+
+    article.degraded.degraded-active a {
       color: #fbbf24 !important;
     }
 
