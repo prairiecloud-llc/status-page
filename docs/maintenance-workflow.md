@@ -82,7 +82,8 @@ When the work is complete:
 - add a completion update comment
 - state completion time
 - summarize service restoration
-- refresh the site if needed
+- close the maintenance issue so it no longer appears in the active Scheduled Maintenance section
+- refresh the site so the completed event is removed from the Scheduled Maintenance section
 
 ## Manual site refresh
 
