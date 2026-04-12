@@ -97,8 +97,9 @@ This workflow exists so operators can rebuild and deploy the public status site 
 Recommended issue labels for maintenance threads:
 - `maintenance`
 - `scheduled-maintenance`
-- `customer-visible`
-- `extended` when applicable
+
+If PrairieCloud later standardizes additional labels such as extension-state markers,
+this document should be updated at the same time the labels are created in GitHub.
 
 ## Operational rule
 
